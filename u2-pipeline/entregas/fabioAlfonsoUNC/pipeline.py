@@ -42,6 +42,7 @@ def construir_pipeline() -> dlt.Pipeline:
         dataset_name="raw_paraguay",
     )
 
+
 def main() -> None:
     pipeline = construir_pipeline()
     info = pipeline.run(paraguay_cities_source())
