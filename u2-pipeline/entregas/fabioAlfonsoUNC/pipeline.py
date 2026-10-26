@@ -38,10 +38,9 @@ def construir_pipeline() -> dlt.Pipeline:
     """Configura y retorna el pipeline de dlt para DuckDB."""
     return dlt.pipeline(
         pipeline_name="paraguay_cities_pipeline",
-        destination="duckdb",
+        destination=dlt.destinations.duckdb("data.duckdb"),
         dataset_name="raw_paraguay",
     )
-
 
 def main() -> None:
     pipeline = construir_pipeline()
